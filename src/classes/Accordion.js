@@ -1,13 +1,13 @@
 export default class Accordion {
 
     constructor(params) {
-        let { elem, titleClass, contentClass, content } = params;
+        let { elem, titleClass, contentClass, content, selector } = params;
         this._elem = elem;
         this._titleClass = titleClass;
         this._contentClass = contentClass;
         this._content = content;
         let accordion = this._render();
-        document.querySelector('body').append(accordion);
+        document.querySelector(selector).append(accordion);
     }
 
     _render() {
